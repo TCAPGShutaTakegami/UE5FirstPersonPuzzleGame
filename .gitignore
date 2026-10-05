@@ -2,6 +2,7 @@
 Intermediate/
 Binaries/
 Saved/
+DerivedDataCache/
 
 # VisualStudioのキャッシュ
 .vs/
