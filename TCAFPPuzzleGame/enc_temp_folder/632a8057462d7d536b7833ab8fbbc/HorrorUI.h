@@ -31,15 +31,6 @@ public:
 	void OnSprintStateChanged(bool bSprinting);
 
 protected:
-	virtual int32 NativePaint(
-		const FPaintArgs& Args,
-		const FGeometry& AllottedGeometry,
-		const FSlateRect& MyCullingRect,
-		FSlateWindowElementList& OutDrawElements,
-		int32 LayerId,
-		const FWidgetStyle& InWidgetStyle,
-		bool bParentEnabled
-	)const override;
 
 	/** Passes control to Blueprint to update the sprint meter widgets */
 	UFUNCTION(BlueprintImplementableEvent, Category="Horror", meta = (DisplayName = "Sprint Meter Updated"))
@@ -48,9 +39,4 @@ protected:
 	/** Passes control to Blueprint to update the sprint meter status */
 	UFUNCTION(BlueprintImplementableEvent, Category="Horror", meta = (DisplayName = "Sprint State Changed"))
 	void BP_SprintStateChanged(bool bSprinting);
-	UPROPERTY(EditAnywhere, Category = "Reticle")
-	float ReticleSize = 4.0f;
-
-	UPROPERTY(EditAnyWhere, Category = "Reticle")
-	FLinearColor ReticleColor = FLinearColor::White;
 };
