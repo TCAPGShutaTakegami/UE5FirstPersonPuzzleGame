@@ -1,0 +1,10 @@
+# UnrealEngine/VisualStudio一時ファイル
+Intermediate/
+Binaries/
+Saved/
+
+# VisualStudioのキャッシュ
+.vs/
+
+# ソリューション
+*.sln
